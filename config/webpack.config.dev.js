@@ -155,6 +155,17 @@ module.exports = {
               cacheDirectory: true,
             },
           },
+					// sass-loader for all .scss files
+					{
+						test: /\.scss$/,
+						use: [{
+							loader: require.resolve('style-loader')
+						},{
+							loader: require.resolve('css-loader')
+						}, {
+							loader: require.resolve('sass-loader')
+						}]
+					},
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
           // "style" loader turns CSS into JS modules that inject <style> tags.
@@ -180,10 +191,8 @@ module.exports = {
                     require('postcss-flexbugs-fixes'),
                     autoprefixer({
                       browsers: [
-                        '>1%',
-                        'last 4 versions',
-                        'Firefox ESR',
-                        'not ie < 9', // React doesn't support IE8 anyway
+                        '>10%',
+                        'last 2 versions',
                       ],
                       flexbox: 'no-2009',
                     }),
