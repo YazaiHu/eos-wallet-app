@@ -6,6 +6,7 @@ import Home from '../routes/Home'
 import Profile from '../routes/Profile'
 import Preferences from '../routes/Preferences'
 import '../styles/app.css'
+import '../styles/typography.css'
 import '../styles/flex.css'
 
 class App extends Component {
