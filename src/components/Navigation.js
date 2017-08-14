@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Avatar from './Avatar'
-import '../styles/navigation.css'
+import '../styles/navigation.scss'
 
 export default class Navigation extends Component {
 	render() {
