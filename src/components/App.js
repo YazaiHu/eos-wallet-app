@@ -16,7 +16,7 @@ class App extends Component {
 				<Navigation />
 				<div className="row no-gutters p-0 container-fluid flex-grow">
 					<LeftColumn />
-					<div className="col-sm-8">
+					<div className="pt-4 col-sm-8">
 						<Route exact path="/" component={Home} />
 						<Route path="/user/:id" component={Profile} />
 						<Route path="/preferences" component={Preferences} />
