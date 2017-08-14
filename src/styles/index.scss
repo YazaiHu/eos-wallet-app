@@ -1,7 +1,9 @@
+@import 'colors';
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-	background: #434b54;
+	background: $bg-grey-80;
 	color: #fff;
 }

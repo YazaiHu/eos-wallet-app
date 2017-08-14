@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'  
 import AccountInfo from './AccountInfo'
+import '../styles/navigation.scss'
 
 export default class LeftColumn extends Component {
 	render() {
 		return (
-			<div className="col-sm-4 bg-eos-cobalt"> 
+			<div className="left-nav"> 
 				<AccountInfo />	
 				<Link className="col-link p-3" to="/">Transfer</Link>
 				<Link className="col-link p-3" to="/">Transaction History</Link>

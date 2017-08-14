@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Avatar from './Avatar'
-import '../styles/navigation.scss'
+import '../styles/header.scss'
 
 export default class Navigation extends Component {
 	render() {
 		return (
-			<nav className="Nav row no-gutters px-4 items-center space-between bg-dark-grey">
+			<nav className="header row no-gutters px-4 items-center space-between">
 				<h1>EOS</h1>
 				<Avatar />
 			</nav>

@@ -14,11 +14,11 @@ import '../styles/colors.scss'
 class App extends Component {
   render() {
     return (
-      <div className="App container-fluid">
+      <div className="app container-fluid">
 				<Navigation />
 				<div className="row no-gutters p-0 container-fluid flex-grow">
 					<LeftColumn />
-					<div className="pt-4 col-sm-8">
+					<div className="main-content">
 						<Route exact path="/" component={Home} />
 						<Route path="/user/:id" component={Profile} />
 						<Route path="/about" component={About} />

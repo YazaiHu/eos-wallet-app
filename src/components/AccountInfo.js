@@ -7,7 +7,7 @@ export default class LeftColumn extends Component {
 		const { account } = this.props
 
 		return (
-			<div>
+			<div class="account-info">
 				<small>{account.value.name}</small>
 				<p>{account.formattedBalance}</p>
 				<small>{account.priceUpdate}</small>
