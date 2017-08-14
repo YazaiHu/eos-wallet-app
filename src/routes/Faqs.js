@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 
-export default class RightColumn extends Component {
+export default class Faqs extends Component {
 	render() {
 		return (
-			<div className="col-sm-8">
+			<div>
+				<h1>FAQs</h1>
 			</div>
 		)
 	}

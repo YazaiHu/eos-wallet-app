@@ -1,19 +1,29 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router'
 import Navigation from './Navigation'
 import LeftColumn from './LeftColumn'
-import RightColumn from './RightColumn'
-import '../styles/app.css'
-import '../styles/flex.css'
-import '../styles/spacing.css'
+import Home from '../routes/Home'
+import Profile from '../routes/Profile'
+import About from '../routes/About'
+import Faqs from '../routes/Faqs'
+import '../styles/app.scss'
+import '../styles/typography.scss'
+import '../styles/flex.scss'
+import '../styles/colors.scss'
 
 class App extends Component {
   render() {
     return (
       <div className="App container-fluid">
 				<Navigation />
-				<div className="row no-gutters p0 container-fluid flex-grow">
+				<div className="row no-gutters p-0 container-fluid flex-grow">
 					<LeftColumn />
-					<RightColumn />
+					<div className="pt-4 col-sm-8">
+						<Route exact path="/" component={Home} />
+						<Route path="/user/:id" component={Profile} />
+						<Route path="/about" component={About} />
+						<Route path="/faqs" component={Faqs} />
+					</div>
 				</div>
       </div>
     )
