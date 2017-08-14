@@ -6,10 +6,10 @@ import Home from '../routes/Home'
 import Profile from '../routes/Profile'
 import About from '../routes/About'
 import Faqs from '../routes/Faqs'
-import '../styles/app.css'
-import '../styles/typography.css'
-import '../styles/flex.css'
-import '../styles/colors.css'
+import '../styles/app.scss'
+import '../styles/typography.scss'
+import '../styles/flex.scss'
+import '../styles/colors.scss'
 
 class App extends Component {
   render() {

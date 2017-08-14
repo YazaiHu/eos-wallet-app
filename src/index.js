@@ -8,8 +8,8 @@ import { Route, Router } from 'react-router'
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
 import reducers from './reducers'
 import registerServiceWorker from './func/registerServiceWorker'
-import './styles/bootstrap.css'
-import './styles/index.css'
+import './styles/bootstrap.scss'
+import './styles/index.scss'
 
 const history = createHistory()
 
