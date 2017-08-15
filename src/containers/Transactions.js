@@ -1,33 +1,51 @@
 import React, {Component} from 'react'
 import {observer} from 'mobx-react'
-import List from '../components/List'
-import Icon from '../components/Icon'
+import {List, Icon} from '../components'
+import TransactionsQuery from '../query/transactions'
 
-const Transaction = ({ date, transaction }) => (
-	<div>
-		<div>
-			<div>
+const Transaction = ({ date, sender, memo, amount }) => (
+	<div className="-list-item -transaction">
+		<div className="-transaction-left">
+			<div className="-transaction-date">
 				<p>{date.month}</p>
-				<p>{date.date}</p>
+				<p>{date.day}</p>
 			</div>
-			<Icon url={transaction.user.icon_url} />
-			<p>{transaction.memo}</p>
+
+			<Icon url={sender.icon} />
+
+			<p className="-transaction-memo">{memo}</p>
 		</div>
 
-		<div>
-			<p>{transaction.amount}</p>
+		<div className="-transaction-amount-container">
+			<p className="-transaction-amount">{amount}</p>
 			<Icon />
 		</div>
 	</div>
 )
 
 class Transactions extends Component {
+	static defaultProps = {
+		data: TransactionsQuery
+	}
+
+	dataTransform(data) {
+		return data.map(item => {
+			const date = new Date(item.date)
+			item.date = {
+				month: date.toLocaleString('en-US', { month: 'long' }),
+				day: date.getDay()
+			}
+			console.log(item.date)
+			return item
+		})
+	}
+
 	render() {
 		const {data} = this.props
 
 		return (
 			<List
-				data={data}
+				data={this.dataTransform(data)}
 				renderItem={Transaction} />
 		)
 	}
