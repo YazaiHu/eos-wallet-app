@@ -1,3 +1,4 @@
+@import 'includes';
 /*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -22,11 +23,6 @@ header,
 nav,
 section {
   display: block;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
 }
 
 figcaption,
@@ -407,12 +403,16 @@ a:focus, a:hover {
 }
 
 a:not([href]):not([tabindex]) {
-  color: inherit;
+  color: $orange;
   text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    color: $orange;
+  }
 }
 
 a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -470,7 +470,7 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: .5rem;
+  margin-bottom: .25rem;
 }
 
 button:focus {
@@ -544,10 +544,14 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 10px;
 }
 
 h3, .h3 {
   font-size: 1.75rem;
+  font-weight: 200;
+  margin-bottom: 10px;
 }
 
 h4, .h4 {
@@ -556,6 +560,7 @@ h4, .h4 {
 
 h5, .h5 {
   font-size: 1.25rem;
+  font-weight: 200;
 }
 
 h6, .h6 {
@@ -2386,7 +2391,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-text {
@@ -2671,6 +2676,10 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   background-image: none;
 }
 
+.btn:not(:first-of-type) {
+    margin-left: 1em;
+}
+
 a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none;
@@ -2678,14 +2687,11 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #0275d8;
-  border-color: #0275d8;
+  background-color: $blue;
 }
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: #025aa5;
-  border-color: #01549b;
+  background-color: darken($blue, 5%);
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -2707,15 +2713,12 @@ fieldset[disabled] a.btn {
 }
 
 .btn-secondary {
-  color: #292b2c;
-  background-color: #fff;
-  border-color: #ccc;
+  color: white;
+  background-color: $blue-grey;
 }
 
 .btn-secondary:hover {
-  color: #292b2c;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  background-color: darken($blue-grey, 5%);
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
@@ -3069,8 +3072,9 @@ fieldset[disabled] a.btn {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  padding: 1.1rem 3rem;
+  font-size: 90%;
+  text-transform: uppercase;
   border-radius: 0.3rem;
 }
 
