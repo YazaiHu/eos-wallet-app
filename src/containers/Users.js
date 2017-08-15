@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 import {observer} from 'mobx-react'
 import List from '../components/List'
 import Icon from '../components/Icon'
@@ -11,7 +11,7 @@ const User = ({ url, name, status }) => (
 			<p>{name}</p>
 			<p>{status}</p>
 		</div>
-	</Link to={url}>
+	</Link>
 )
 
 class Users extends Component {
@@ -19,7 +19,6 @@ class Users extends Component {
 		const {data} = this.props
 
 		return (
-			<h3>Users</h3>
 			<List
 				data={data}
 				renderItem={User} />

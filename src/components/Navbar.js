@@ -1,6 +1,17 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
-import Balance from './Balance'
+import Link from './Link'
+import {
+	Balance,
+	Icon,
+	List,
+} from './'
+
+const NavLink = ({icon, text, ...props}) => (
+	<Link {...props}>
+		{icon && <Icon {...icon} />}
+		{text}
+	</Link>
+)
 
 class Navbar extends Component {
 	static defaultProps = {
@@ -26,7 +37,9 @@ class Navbar extends Component {
 		return (
 			<nav className={className}>
 				<Balance />
-				{links.map((data, key) => <Link {...{key, ...data}}>{text}</Link>)}
+				<List
+					data={links}
+					renderItem={NavLink} />
 			</nav>
 		)
 	}

@@ -38,6 +38,7 @@ class App extends Component {
 					<Route path="/user/:id" component={Profile} />
 					<Route path="/about" component={About} />
 					<Route path="/faqs" component={Faqs} />
+					<Route path="/users" component={Users} />
 					<Route path="/preferences" component={Preferences} />
 					<Footer />
 				</Scene>

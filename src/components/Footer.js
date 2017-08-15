@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
-import UserSummary from './UserSummary'
-// import UserQuery from '../query/User'
+import Link from './Link'
 
 class Footer extends Component {
 	static defaultProps = {
-		className: 'Nav row no-gutters px-4 items-center space-between bg-dark-grey' 
+		className: 'Nav row no-gutters px-4 items-center space-between bg-dark-grey'
 	}
 
 	render() {

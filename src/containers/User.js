@@ -1,14 +1,24 @@
 import React, {Component} from 'react'
-import Icon from './Icon'
+import {Link} from 'react-router-dom'
+import {Icon} from '../components'
 
-const UserSummary = ({
+const User = ({
 	className = 'row',
 	greeting,
-	link = 'www.website.com',
+	link = {
+		to: 'www.website.com'
+	},
 	location,
 	name = 'Display Name',
 	status,
-	styles,
+	styles = {
+		displayName: 'display-name',
+		location: 'location',
+		link: 'link',
+		logout: 'logout',
+		icon: 'user-icon',
+		status: 'status'
+	},
 }) => (
 	<div className={className}>
 		<p className={styles.displayName}>{greeting}{name}</p>
@@ -17,7 +27,8 @@ const UserSummary = ({
 
 		<div>
 			<Link className={styles.link} to={link.to}>{link.to}</Link>
-			{greeting && }
+			{greeting &&
+				<Link className={styles.logout}><Icon>Logout</Icon></Link>}
 		</div>
 
 		<Icon
@@ -28,5 +39,5 @@ const UserSummary = ({
 	</div>
 )
 
-export default UserSummary
+export default User
 

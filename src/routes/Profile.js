@@ -1,14 +1,15 @@
 import React, {Component} from 'react'
-import UserSummary from '../containers/UserSummary'
-import TransactionHistory from '../containers/TransactionHistory'
-//import UserQuery from '../query/User'
+import {
+	User,
+	Transactions
+} from '../containers'
 
 class Profile extends Component {
 	render() {
 		return (
 			<div>
-				<UserSummary />
-				<TransactionHistory />
+				<User />
+				<Transactions />
 			</div>
 		)
 	}
