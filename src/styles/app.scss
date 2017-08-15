@@ -24,22 +24,50 @@
     float: left;
     width: calc(100% - 275px);
     padding: 2rem 2.5rem;
-}
+    ul {
+        padding-left: 0;
+        list-style-type: none;
+        li {
+            background-color: $bg-grey-60;
+            @include border-radius(12px);
+            padding: 1em 1.5em;
+            .-transaction-amount {
+                margin-bottom: 0;
+            }
+            .-transaction-date {
+                display: inline-block;
+                text-align: center;
+                .date-month {
+                    font-size: 80%;
+                    text-transform: uppercase;
+                    font-weight: 200;
+                }
+                .date-day {
+                    font-size: 130%;
+                    font-weight: 200;
+                    line-height: 90%;
+                }
+            }
+            &:nth-child(even) {
+                background-color: transparent;
+            }
+        }
+    }
+    .section:not(:first-child) {
+        margin-top: 50px;
+    }
 
-.section:not(:first-child) {
-    margin-top: 50px;
-}
-
-.module {
-    background-color: $bg-grey-60;
-    @include border-radius(12px);
-    width: 100%;
-    padding: 1em;
-    margin-bottom: 2em;
-    p {
-        margin-bottom: 0;
-        font-size: 90%;
-        font-weight: 200;
-        line-height: 1.75em;
+    .module {
+        background-color: $bg-grey-60;
+        @include border-radius(12px);
+        width: 100%;
+        padding: 1em;
+        margin-bottom: 2em;
+        p {
+            margin-bottom: 0;
+            font-size: 90%;
+            font-weight: 200;
+            line-height: 1.75em;
+        }
     }
 }
