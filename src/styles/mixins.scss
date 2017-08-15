@@ -1,0 +1,15 @@
+@mixin gradient($from-color, $to-color, $start) {
+	background-color: mix($from-color, $to-color); /* Fallback */
+	background-image: -webkit-linear-gradient($start, $from-color, $to-color); 
+	background-image:    -moz-linear-gradient($start, $from-color, $to-color);
+	background-image:     -ms-linear-gradient($start, $from-color, $to-color);
+	background-image:      -o-linear-gradient($start, $from-color, $to-color);
+	-ms-filter:	"progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$from-color}', EndColorStr='#{$to-color}')";
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}

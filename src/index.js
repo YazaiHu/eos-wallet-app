@@ -7,8 +7,8 @@ import {Router} from 'react-router'
 // TODO assess if needed
 import registerServiceWorker from './func/registerServiceWorker'
 
-import './styles/bootstrap.css'
-import './styles/index.css'
+import './styles/bootstrap.scss'
+import './styles/index.scss'
 
 const history = createHistory()
 
