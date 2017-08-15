@@ -19,18 +19,18 @@ const NavLink = ({
 
 class Navbar extends Component {
 	static defaultProps = {
-		className: 'col-sm-4 bg-eos-cobalt',
+		className: 'left-nav',
 		styles: {
 			list: 'navbar-links'
 		},
 		links: [
-			{ to: '/transfer', text: 'Transfer', icon: null, },
-			{ to: '/transactions', text: 'Transaction History', icon: null },
-			{ to: '/permissions', text: 'Permissions', icon: null },
-			{ to: '/users', text: 'Users', icon: null },
-			{ to: '/about', text: 'About', icon: null },
-			{ to: '/user/2', text: 'Users', icon: null },
-			{ to: '/faq', text: 'FAQ', icon: null },
+			{ to: '/transfer', text: 'Transfer', icon: null, className: 'col-link logged-in', },
+			{ to: '/transactions', text: 'Transaction History', icon: null, className: 'col-link logged-in',  },
+			{ to: '/permissions', text: 'Permissions', icon: null, className: 'col-link logged-in', },
+			{ to: '/users', text: 'Users' },
+			{ to: '/about', text: 'About' },
+			{ to: '/user/2', text: 'Users' },
+			{ to: '/faq', text: 'FAQ' },
 		],
 	}
 

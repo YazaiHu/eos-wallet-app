@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {Icon} from '../components'
 
 const User = ({
-	className = 'user row',
+	className = 'meta',
 	greeting,
 	link = {
 		to: 'www.website.com'
@@ -14,7 +14,7 @@ const User = ({
 	styles = {
 		displayName: 'display-name',
 		location: 'location',
-		link: 'link',
+		link: 'url',
 		logout: 'logout',
 		icon: 'user-icon',
 		status: 'status'

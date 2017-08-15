@@ -3,6 +3,12 @@ import {observer} from 'mobx-react'
 
 class Balance extends Component {
 	static defaultProps = {
+		className: 'account-info',
+		styles: {
+			primary: 'nav-primary',
+			balance: 'balance',
+			change: 'change',
+		},
 		account: {
 			value: {
 				belongsTo: ['My', ''],
@@ -13,13 +19,13 @@ class Balance extends Component {
 	}
 
 	render() {
-		const {account} = this.props
+		const {account, className, styles} = this.props
 
 		return (
-			<div>
-				<small>{account.value.name} EOS</small>
-				<p>{account.formattedBalance}</p>
-				<small>{account.priceUpdate}</small>
+			<div className={className}>
+				<div className={styles.primary}>{account.value.name} EOS</div>
+				<div className={styles.balance}>{account.formattedBalance}</div>
+				<div className={styles.change}>{account.priceUpdate}</div>
 			</div>
 		)
 	}
