@@ -7,8 +7,8 @@ const Transaction = ({ date, sender, memo, amount }) => (
 	<div className="-list-item -transaction">
 		<div className="-transaction-left">
 			<div className="-transaction-date">
-				<p>{date.month}</p>
-				<p>{date.day}</p>
+				<div className="date-month">{date.month}</div>
+				<div className="date-day">{date.day}</div>
 			</div>
 
 			<Icon url={sender.icon} />
