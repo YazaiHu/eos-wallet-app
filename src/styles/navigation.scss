@@ -25,14 +25,19 @@
                 line-height: 1rem;
             }
         }
-        .col-link:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "";
-            height: 1px;
-            width: 100%;
-            @include gradient($bg-grey-40, #5B6168, left);
+        .col-link {
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                height: 1px;
+                width: 100%;
+                @include gradient($bg-grey-40, #5B6168, left);
+            }
+            &:hover {
+                background: darken($bg-grey-40, 2%);
+            }
         }
     }
 }

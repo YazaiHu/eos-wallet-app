@@ -1,3 +1,5 @@
+@import 'includes';
+
 .app {
 	min-height: 100vh;
 	display: flex;
@@ -24,5 +26,23 @@
 .main-content {
     float: left;
     width: calc(100% - 275px);
-    padding: 2.5rem;
+    padding: 2rem 2.5rem;
+}
+
+.section:not(:first-child) {
+    margin-top: 50px;
+}
+
+.module {
+    background-color: $bg-grey-60;
+    @include border-radius(12px);
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 2em;
+    p {
+        margin-bottom: 0;
+        font-size: 90%;
+        font-weight: 200;
+        line-height: 1.75em;
+    }
 }

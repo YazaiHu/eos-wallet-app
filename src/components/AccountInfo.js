@@ -14,9 +14,17 @@ export default class LeftColumn extends Component {
                     <div className="change">{account.priceUpdate}</div>
                 </div>
                 <div>
-                    <Link className="col-link" to="/">Transfer</Link>
-                    <Link className="col-link" to="/">Transaction History</Link>
-                    <Link className="col-link" to="/">Permissions</Link>
+                    <Link className="col-link" to="/">
+                        <span className="icon-eos_icons_transfer"></span>
+                        Transfer
+                    </Link>
+                    <Link className="col-link" to="/">
+                        <span className="icon-eos_icons_history"></span>        Transaction History
+                    </Link>
+                    <Link className="col-link" to="/">
+                        <span className="icon-eos_icons_permissions"></span>
+                        Permissions
+                    </Link>
                 </div>
             </div>
 		)
