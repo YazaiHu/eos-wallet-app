@@ -31,9 +31,6 @@ class Navbar extends Component {
 			{ to: '/permissions', text: 'Permissions', icon: null, className: 'col-link logged-in', },
 		],
 		links: [
-			{ to: '/transfer', text: 'Transfer', icon: null, className: 'col-link logged-in', },
-			{ to: '/transactions', text: 'Transaction History', icon: null, className: 'col-link logged-in',  },
-			{ to: '/permissions', text: 'Permissions', icon: null, className: 'col-link logged-in', },
 			{ to: '/users', text: 'Users' },
 			{ to: '/about', text: 'About' },
 			{ to: '/user/2', text: 'Users' },
@@ -42,7 +39,7 @@ class Navbar extends Component {
 	}
 
 	render() {
-		const {className, links, styles} = this.props
+		const {className, links, styles, userActions} = this.props
 
 		return (
 			<nav className={className}>
@@ -50,7 +47,7 @@ class Navbar extends Component {
 					<Balance />
 					<List
 						className={styles.userActionLinks}
-						data={links}
+						data={userActions}
 						renderItem={NavLink} />
 				</div>
 
