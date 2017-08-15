@@ -5,13 +5,13 @@ class Avatar extends Component {
         return (
             <div className="Avatar">
                 <div className="thumbnail">
-                    <div className="settings"></div>
+                    <div className="settings icon-eos_icons_settings"></div>
                 </div>
                 <div className="meta">
                     <div className="display-name">Hi, DisplayName</div>
                     <div className="url">
                         steemit.com/@username
-                        <span> | <div className="icon"></div></span>
+                         | <span className="icon-eos_icons_logout"></span>
                     </div>
                 </div>
             </div>

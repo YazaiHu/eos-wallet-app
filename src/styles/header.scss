@@ -22,6 +22,11 @@
             color: $blue-grey;
             font-size: 100%;
             text-align: right;
+            span {
+                color: $blue;
+                vertical-align: middle;
+                font-size: 110%;
+            }
         }
     }
     .thumbnail {
@@ -41,6 +46,13 @@
             border: 5px solid $blue;
             background-color: white;
             @include border-radius(15px);
+            &:before {
+                color: $bg-grey-100;
+                position: absolute;
+                left: 3px;
+                top: 3px;
+                font-size: 90%;
+            }
         }
     }
 }
