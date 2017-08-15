@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'  
+import {Link} from 'react-router-dom'
 import Balance from './Balance'
 
 class Navbar extends Component {
@@ -24,7 +24,7 @@ class Navbar extends Component {
 		const {className, links} = this.props
 
 		return (
-			<nav className={className}> 
+			<nav className={className}>
 				<Balance />
 				{links.map((data, key) => <Link {...{key, ...data}}>{text}</Link>)}
 			</nav>
