@@ -1,11 +1,19 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
+import {
+	User,
+	Transactions
+} from '../containers'
 
-export default class Profile extends Component {
+class Profile extends Component {
 	render() {
 		return (
 			<div>
-				<h2>Profile</h2>
+				<User />
+				<Transactions />
 			</div>
 		)
 	}
 }
+
+export default Profile
+

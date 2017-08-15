@@ -1,0 +1,52 @@
+.header {
+    background: $bg-grey-100;
+    overflow: hidden;
+    padding: 1.25rem;
+    height: 90px;
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    flex: 1 0 100%;
+    .meta {
+        position: absolute;
+        top: 1.25rem;
+        right: 140px;
+        text-align: right;
+        .display-name {
+            font-size: 175%;
+            font-weight: 100;
+            line-height: 1em;
+            margin-bottom: 0;
+        }
+        .url {
+            color: $blue-grey;
+            font-size: 100%;
+        }
+    }
+    .thumbnail {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        width: 100px;
+        height: 100px;
+        border: 8px solid $orange;
+        @include border-radius(50px);
+        .settings {
+            position: absolute;
+            top: 45px;
+            left: -15px;
+            width: 30px;
+            height: 30px;
+            border: 5px solid $blue;
+            background-color: white;
+            @include border-radius(15px);
+            &:before {
+                color: $bg-grey-100;
+                position: absolute;
+                font-size: 90%;
+                left: 3px;
+                top: 3px;
+            }
+        }
+    }
+}

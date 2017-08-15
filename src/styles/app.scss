@@ -1,24 +1,45 @@
-.App {
-  text-align: center;
+.app {
 	min-height: 100vh;
 	display: flex;
-	flex-direction: column;
 	flex: 1;
 	padding: 0 !important;
 }
 
-.App-logo {
-  height: 80px;
+.app-logo {
+    height: 80px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.app-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
-.App-intro {
-  font-size: large;
+.app-intro {
+    font-size: large;
 }
 
+.main-content {
+    float: left;
+    width: calc(100% - 275px);
+    padding: 2rem 2.5rem;
+}
+
+.section:not(:first-child) {
+    margin-top: 50px;
+}
+
+.module {
+    background-color: $bg-grey-60;
+    @include border-radius(12px);
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 2em;
+    p {
+        margin-bottom: 0;
+        font-size: 90%;
+        font-weight: 200;
+        line-height: 1.75em;
+    }
+}

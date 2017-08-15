@@ -2,4 +2,27 @@
 	display: flex;
 	color: #fff;
 	text-decoration: none;
+    padding: 1.25em;
+    position: relative;
+    font-size: 90%;
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        height: 1px;
+        width: 100%;
+        @include gradient($bg-grey-60, #4B5259, left);
+    }
+
+    &:hover, &:visited, &:active, &:focus {
+        text-decoration: none;
+        color: inherit;
+        background: darken($bg-grey-60, 2%);
+    }
+    span {
+        line-height: 1.5;
+        margin-right: .5em;
+        color: $blue;
+    }
 }
