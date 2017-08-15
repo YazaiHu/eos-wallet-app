@@ -8,6 +8,7 @@ import {
 	About,
 	Faqs,
 	Home,
+	NoMatch,
 	Permissions,
 	Preferences,
 	Profile,
@@ -23,7 +24,7 @@ const Scene = ({
 
 class App extends Component {
 	static defaultProps = {
-		className: 'App container-fluid p-0 row no-gutters<header class="Nav row no-gutters px-4 items-center space-between bg-dark-grey flex-grow'
+		className: 'app container-fluid p-0 row no-gutters'
 	}
 
 	render() {
@@ -43,6 +44,7 @@ class App extends Component {
 					<Route path="/faqs" component={Faqs} />
 					<Route path="/users" component={Users} />
 					<Route path="/preferences" component={Preferences} />
+					<Route component={NoMatch} />
 					<Footer />
 				</Scene>
 			</main>
