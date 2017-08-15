@@ -44,7 +44,7 @@ class App extends Component {
 					<Route path="/faqs" component={Faqs} />
 					<Route path="/users" component={Users} />
 					<Route path="/preferences" component={Preferences} />
-					<Route component={NoMatch} />
+					<Route path="*" component={NoMatch} />
 					<Footer />
 				</Scene>
 			</main>
