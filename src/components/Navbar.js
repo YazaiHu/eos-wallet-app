@@ -10,13 +10,13 @@ class Navbar extends Component {
 			activeLink: 'active',
 		},
 		links: [
-			{ to: '/', text: 'Transfer', icon: null, },
-			{ to: '/', text: 'Transaction History', icon: null },
-			{ to: '/', text: 'Permissions', icon: null },
-			{ to: '/', text: 'Users', icon: null },
-			{ to: '/', text: 'About', icon: null },
-			{ to: '/', text: 'Users', icon: null },
-			{ to: '/', text: 'FAQ', icon: null },
+			{ to: '/transfer', text: 'Transfer', icon: null, },
+			{ to: '/transactions', text: 'Transaction History', icon: null },
+			{ to: '/permissions', text: 'Permissions', icon: null },
+			{ to: '/users', text: 'Users', icon: null },
+			{ to: '/about', text: 'About', icon: null },
+			{ to: '/user/2', text: 'Users', icon: null },
+			{ to: '/faq', text: 'FAQ', icon: null },
 		],
 	}
 

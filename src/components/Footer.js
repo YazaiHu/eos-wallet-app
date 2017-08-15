@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import UserSummary from './UserSummary'
 // import UserQuery from '../query/User'
 
-class Header extends Component {
+class Footer extends Component {
 	static defaultProps = {
 		className: 'Nav row no-gutters px-4 items-center space-between bg-dark-grey' 
 	}
@@ -11,13 +11,17 @@ class Header extends Component {
 		const {className} = this.props
 
 		return (
-			<header className={className}>
-				<h1>EOS</h1>
-				<UserSummary />
-			</header>
+			<footer className={className}>
+				<small>Copyright 2017 | All Rights Reserved</small>
+				<div>
+					<Link to="/privacy">Privacy Policy</Link>
+					<span> | </span>
+					<Link to="/terms">Terms of Service</Link>
+				</div>
+			</footer>
 		)
 	}
 }
 
-export default Header
+export default Footer
 

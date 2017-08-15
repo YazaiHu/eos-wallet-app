@@ -2,31 +2,31 @@ import React, {Component} from 'react'
 // import validation
 // import mutation
 
-class TransferForm extends Component {
+class Login extends Component {
 	render() {
 		return (
 			<form>
 				<fieldset>
-					<label>To</label>
+					<label>Username/label>
 					<input type="text" />
 				</fieldset>
 
 				<fieldset>
-					<label>Amount</label>
+					<label>Password</label>
 					<input type="text" />
 				</fieldset>
 
 				<fieldset>
-					<label>Memo</label>
-					<input type="text" />
+					<label>Keep me logged in</label>
+					<input type="checkbox" />
 				</fieldset>
 
-				<button type="submit">Submit</button>
-				<div>Clear</div>
+				<button type="submit">Login</button>
 			</form>
 		)
 	}
 }
 
-export default TransferForm
+export default Login
+
 

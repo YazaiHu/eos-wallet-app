@@ -1,12 +1,21 @@
 import React, {Component} from 'react'
 import {Route} from 'react-router'
 import {
-	Home,
-	Profile,
+	Header,
+	Footer,
+	Navbar} from '../components'
+import {
 	About,
-	Faqs} from 'routes'
+	Faqs,
+	Home,
+	Permissions,
+	Preferences,
+	Profile,
+	TransactionHistory,
+	Transfer,
+	Users} from '../routes'
 
-const Scene = ({children, className = 'row no-gutters p-0 container-fluid flex-grow', ...props}) => 
+const Scene = ({children, className = 'row no-gutters p-0 container-fluid flex-grow', ...props}) =>
 	<div {...props}>{children}</div>
 
 class App extends Component {

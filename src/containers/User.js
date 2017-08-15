@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import Icon from './Icon'
-// import UserQuery from '../query/User'
 
 const UserSummary = ({
 	className = 'row',
