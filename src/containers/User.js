@@ -20,22 +20,28 @@ const User = ({
 		status: 'status'
 	},
 }) => (
-	<div className={className}>
-		<p className={styles.displayName}>{greeting}{name}</p>
+    <div className="account-info">
+        <div className="thumbnail">
+            <div className="settings icon-eos_icons_settings"></div>
+        </div>
+	   <div className={className}>
 
-		{location && <p className={styles.location}>{location}</p>}
+            <p className={styles.displayName}>{greeting}{name}</p>
 
-		<div>
-			<Link className={styles.link} to={link.to}>{link.to}</Link>
-			{greeting &&
-				<Link className={styles.logout}><Icon>Logout</Icon></Link>}
-		</div>
+            {location && <p className={styles.location}>{location}</p>}
 
-		<Icon
-			className={styles.icon}
-			size={location ? Icon.small : Icon.large} />
+            <div>
+                <Link className={styles.link} to={link.to}>{link.to}</Link>
+                {greeting &&
+                    <Link className={styles.logout}><Icon>Logout</Icon></Link>}
+            </div>
 
-		{status && <p className={styles.status}>{status}</p>}
+            <Icon
+                className={styles.icon}
+                size={location ? Icon.small : Icon.large} />
+
+            {status && <p className={styles.status}>{status}</p>}
+        </div>
 	</div>
 )
 
