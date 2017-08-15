@@ -2,17 +2,25 @@ import React, {Component} from 'react'
 import Link from './Link'
 import {
 	Balance,
-	Icon,
 	List,
 } from './'
 
 const NavLink = ({
 	className = 'col-link p3',
-	icon,
 	text,
 	...props}) => (
 	<Link className={className} {...props}>
-		{icon && <Icon {...icon} />}
+		{text}
+	</Link>
+)
+
+const UserLink = ({
+	className = 'col-link p3',
+    iconClass,
+	text,
+	...props}) => (
+	<Link className={className} {...props}>
+		<span className={iconClass}></span>
 		{text}
 	</Link>
 )
@@ -26,9 +34,9 @@ class Navbar extends Component {
 			userActionsList: '-links'
 		},
 		userActions: [
-			{ to: '/transfer', text: 'Transfer', icon: null, className: 'col-link logged-in', },
-			{ to: '/transactions', text: 'Transaction History', icon: null, className: 'col-link logged-in',  },
-			{ to: '/permissions', text: 'Permissions', icon: null, className: 'col-link logged-in', },
+			{ to: '/transfer', text: 'Transfer', iconClass: 'icon-eos_icons_transfer', },
+			{ to: '/transactions', text: 'Transaction History', iconClass: 'icon-eos_icons_history',  },
+			{ to: '/permissions', text: 'Permissions', iconClass: 'icon-eos_icons_permissions', },
 		],
 		links: [
 			{ to: '/users', text: 'Users' },
@@ -48,7 +56,7 @@ class Navbar extends Component {
 					<List
 						className={styles.userActionLinks}
 						data={userActions}
-						renderItem={NavLink} />
+						renderItem={UserLink} />
 				</div>
 
 				<List
