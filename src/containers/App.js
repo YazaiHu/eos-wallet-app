@@ -16,11 +16,11 @@ import {
 	Users} from '../routes'
 
 const Scene = ({children, className = 'row no-gutters p-0 container-fluid flex-grow', ...props}) =>
-	<div {...props}>{children}</div>
+	<div className={className} {...props}>{children}</div>
 
 class App extends Component {
 	static defaultProps = {
-		className: 'App container-fluid'
+		className: 'App container-fluid p-0 row no-gutters<header class="Nav row no-gutters px-4 items-center space-between bg-dark-grey flex-grow'
 	}
 
 	render() {
