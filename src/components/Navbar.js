@@ -6,8 +6,12 @@ import {
 	List,
 } from './'
 
-const NavLink = ({icon, text, ...props}) => (
-	<Link {...props}>
+const NavLink = ({
+	className = 'col-link p3',
+	icon,
+	text,
+	...props}) => (
+	<Link className={className} {...props}>
 		{icon && <Icon {...icon} />}
 		{text}
 	</Link>
@@ -17,8 +21,7 @@ class Navbar extends Component {
 	static defaultProps = {
 		className: 'col-sm-4 bg-eos-cobalt',
 		styles: {
-			link: 'col-link p3',
-			activeLink: 'active',
+			list: 'navbar-links'
 		},
 		links: [
 			{ to: '/transfer', text: 'Transfer', icon: null, },
@@ -32,12 +35,13 @@ class Navbar extends Component {
 	}
 
 	render() {
-		const {className, links} = this.props
+		const {className, links, styles} = this.props
 
 		return (
 			<nav className={className}>
 				<Balance />
 				<List
+					className={styles.list}
 					data={links}
 					renderItem={NavLink} />
 			</nav>

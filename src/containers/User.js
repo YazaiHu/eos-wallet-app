@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {Icon} from '../components'
 
 const User = ({
-	className = 'row',
+	className = 'user row',
 	greeting,
 	link = {
 		to: 'www.website.com'

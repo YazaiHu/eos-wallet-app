@@ -2,11 +2,12 @@ import React, {Component} from 'react'
 
 class List extends Component {
 	render() {
-		const {data, renderItem} = this.props
+		const {className, data, renderItem} = this.props
 
 		return (
-			<ul>
-				{data.map((item, key) => renderItem({key, ...item}))}
+			<ul className={className}>
+				{data.map((item, key) =>
+					<li key={key}>{renderItem({key, ...item})}</li>)}
 			</ul>
 		)
 	}
