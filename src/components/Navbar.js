@@ -21,8 +21,15 @@ class Navbar extends Component {
 	static defaultProps = {
 		className: 'left-nav',
 		styles: {
-			list: 'navbar-links'
+			list: 'navbar-links',
+			userActions: '-is-logged-in',
+			userActionsList: '-links'
 		},
+		userActions: [
+			{ to: '/transfer', text: 'Transfer', icon: null, className: 'col-link logged-in', },
+			{ to: '/transactions', text: 'Transaction History', icon: null, className: 'col-link logged-in',  },
+			{ to: '/permissions', text: 'Permissions', icon: null, className: 'col-link logged-in', },
+		],
 		links: [
 			{ to: '/transfer', text: 'Transfer', icon: null, className: 'col-link logged-in', },
 			{ to: '/transactions', text: 'Transaction History', icon: null, className: 'col-link logged-in',  },
@@ -39,7 +46,14 @@ class Navbar extends Component {
 
 		return (
 			<nav className={className}>
-				<Balance />
+				<div className={styles.userActions}>
+					<Balance />
+					<List
+						className={styles.userActionLinks}
+						data={links}
+						renderItem={NavLink} />
+				</div>
+
 				<List
 					className={styles.list}
 					data={links}
