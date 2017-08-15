@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-const Icon = ({ alt = "Image", url, size }) => (
+const Icon = ({ alt = "Image", url, size = '' }) => (
 	<figure>
 		<i
 			aria-label={alt}

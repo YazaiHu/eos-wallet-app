@@ -1,6 +1,15 @@
-@import 'includes';
-
 .left-nav {
+	.navbar-links {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
     background: $bg-grey-60;
 	min-height: 80px;
 	overflow: hidden;

@@ -15,8 +15,10 @@ class Header extends Component {
 
 		return (
 			<header className={className}>
-				<Icon className={styles.icon} />
-				<h1>EOS</h1>
+				<div>
+					<Icon className={styles.icon} />
+					<h1>EOS</h1>
+				</div>
 				<User />
 			</header>
 		)

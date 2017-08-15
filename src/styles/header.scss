@@ -1,12 +1,13 @@
-@import 'includes';
-
 .header {
-    background: $bg-grey-100;
-	overflow: hidden;
-    padding: 1.25rem;
-    height: 90px;
-    position: relative;
-    overflow: visible;
+		background: $bg-grey-100;
+		overflow: hidden;
+		padding: 1.25rem;
+		height: 90px;
+		position: relative;
+		overflow: visible;
+		width: 100%;
+		flex: 1 0 100%;
+
     .meta {
         position: absolute;
         top: 1.25rem;
