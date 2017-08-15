@@ -1,6 +1,15 @@
-@import 'includes';
-
 .left-nav {
+	.navbar-links {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
     background: $bg-grey-60;
 	min-height: 80px;
 	overflow: hidden;
@@ -9,7 +18,7 @@
         text-transform: uppercase;
         font-size: 90%;
     }
-    .logged-in {
+    .-is-logged-in {
         background: $bg-grey-40;
         position: relative;
         .account-info {
@@ -25,18 +34,28 @@
                 line-height: 1rem;
             }
         }
-        .col-link {
-            &:before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: "";
-                height: 1px;
-                width: 100%;
-                @include gradient($bg-grey-40, #5B6168, left);
-            }
-            &:hover {
-                background: darken($bg-grey-40, 2%);
+        ul {
+            margin-bottom: 0;
+            padding-left: 0;
+            .col-link {
+                &:before {
+                    color: $blue;
+                    padding-right: .5em;
+                    vertical-align: middle;
+                    font-family: 'icomoon' !important;
+                }
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    height: 1px;
+                    width: 100%;
+                    @include gradient($bg-grey-40, #5B6168, left);
+                }
+                &:hover {
+                    background: darken($bg-grey-40, 2%);
+                }
             }
         }
     }
