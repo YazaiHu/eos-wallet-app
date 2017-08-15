@@ -35,7 +35,6 @@ class Transactions extends Component {
 				month: date.toLocaleString('en-US', { month: 'long' }),
 				day: date.getDay()
 			}
-			console.log(item.date)
 			return item
 		})
 	}
