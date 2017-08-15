@@ -7,11 +7,18 @@ export default class LeftColumn extends Component {
 		const { account } = this.props
 
 		return (
-			<div class="account-info">
-				<small>{account.value.name}</small>
-				<p>{account.formattedBalance}</p>
-				<small>{account.priceUpdate}</small>
-			</div>
+            <div className="logged-in">
+                <div className="account-info">
+                    <div className="nav-primary">{account.value.name}</div>
+                    <div className="balance">{account.formattedBalance}</div>
+                    <div className="change">{account.priceUpdate}</div>
+                </div>
+                <div>
+                    <Link className="col-link" to="/">Transfer</Link>
+                    <Link className="col-link" to="/">Transaction History</Link>
+                    <Link className="col-link" to="/">Permissions</Link>
+                </div>
+            </div>
 		)
 	}
 }

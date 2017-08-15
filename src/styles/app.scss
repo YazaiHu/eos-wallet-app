@@ -1,5 +1,4 @@
 .app {
-  text-align: center;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -8,21 +7,22 @@
 }
 
 .app-logo {
-  height: 80px;
+    height: 80px;
 }
 
 .app-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
 .app-intro {
-  font-size: large;
+    font-size: large;
 }
 
 .main-content {
     float: left;
     width: calc(100% - 275px);
+    padding: 2.5rem;
 }

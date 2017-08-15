@@ -5,7 +5,7 @@ import '../styles/header.scss'
 export default class Navigation extends Component {
 	render() {
 		return (
-			<nav className="header row no-gutters px-4 items-center space-between">
+			<nav className="header row no-gutters items-center space-between">
 				<h1>EOS</h1>
 				<Avatar />
 			</nav>

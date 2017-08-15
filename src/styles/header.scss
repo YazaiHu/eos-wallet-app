@@ -1,7 +1,45 @@
-@import 'colors';
+@import 'includes';
 
 .header {
     background: $bg-grey-100;
-	min-height: 80px;
 	overflow: hidden;
+    padding: 1.25rem;
+    height: 90px;
+    position: relative;
+    overflow: visible;
+    .meta {
+        position: absolute;
+        top: 1.25rem;
+        right: 140px;
+        .display-name {
+            font-size: 175%;
+            font-weight: 100;
+            line-height: 1em;
+            text-align: right;
+        }
+        .url {
+            color: $blue-grey;
+            font-size: 100%;
+            text-align: right;
+        }
+    }
+    .thumbnail {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        width: 100px;
+        height: 100px;
+        border: 8px solid $orange;
+        @include border-radius(50px);
+        .settings {
+            position: absolute;
+            top: 45px;
+            left: -15px;
+            width: 30px;
+            height: 30px;
+            border: 5px solid $blue;
+            background-color: white;
+            @include border-radius(15px);
+        }
+    }
 }
