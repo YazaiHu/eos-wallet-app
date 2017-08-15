@@ -15,7 +15,10 @@ import {
 	Transfer,
 	Users} from '../routes'
 
-const Scene = ({children, className = 'row no-gutters p-0 container-fluid flex-grow', ...props}) =>
+const Scene = ({
+	children,
+	className = 'main-content',
+	...props}) =>
 	<div className={className} {...props}>{children}</div>
 
 class App extends Component {

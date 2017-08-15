@@ -3,7 +3,7 @@ import {observer} from 'mobx-react'
 
 class Balance extends Component {
 	static defaultProps = {
-		className: 'account-info',
+		className: 'account-info logged-in',
 		styles: {
 			primary: 'nav-primary',
 			balance: 'balance',
