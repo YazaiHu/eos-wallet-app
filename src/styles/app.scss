@@ -31,23 +31,6 @@
             background-color: $bg-grey-60;
             @include border-radius(12px);
             padding: .75em 1.5em;
-            .-transaction-amount {
-                margin-bottom: 0;
-            }
-            .-transaction-date {
-                display: inline-block;
-                text-align: center;
-                .date-month {
-                    font-size: 80%;
-                    text-transform: uppercase;
-                    font-weight: 200;
-                }
-                .date-day {
-                    font-size: 130%;
-                    font-weight: 200;
-                    line-height: 90%;
-                }
-            }
             &:nth-child(even) {
                 background-color: transparent;
             }
@@ -111,6 +94,25 @@
         text-align: right;
         .-transaction-amount {
             margin-bottom: 0;
+            font-size: 120%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 40px;
+        }
+        .-transaction-date {
+            display: inline-block;
+            text-align: center;
+            .date-month {
+                font-size: 80%;
+                text-transform: uppercase;
+                font-weight: 200;
+            }
+            .date-day {
+                font-size: 130%;
+                font-weight: 200;
+                line-height: 90%;
+            }
         }
     }
     .module {
