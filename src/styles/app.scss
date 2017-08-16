@@ -34,20 +34,6 @@
             .-transaction-amount {
                 margin-bottom: 0;
             }
-            .-transaction-date {
-                display: inline-block;
-                text-align: center;
-                .date-month {
-                    font-size: 80%;
-                    text-transform: uppercase;
-                    font-weight: 200;
-                }
-                .date-day {
-                    font-size: 130%;
-                    font-weight: 200;
-                    line-height: 90%;
-                }
-            }
             &:nth-child(even) {
                 background-color: transparent;
             }

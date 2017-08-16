@@ -24,7 +24,7 @@ const Scene = ({
 
 class App extends Component {
 	static defaultProps = {
-		className: 'app container-fluid p-0 row no-gutters'
+		className: 'app container-fluid p-0 row no-gutters d-flex flex-row'
 	}
 
 	render() {
