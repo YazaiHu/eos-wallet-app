@@ -1,12 +1,18 @@
 import React, {Component} from 'react'
 
-const Icon = ({ alt = "Image", url, size = '' }) => (
-	<figure>
+const Icon = ({
+	className,
+	alt = "Image",
+	url,
+	style = {
+		icon: '-icon-class'
+	}}) => (
+	<div className={className}>
 		<i
 			aria-label={alt}
-			className={`icon ${size}`}
+			className={style.icon}
 			style={{ backgroundImage: `url(${url})` }} />
-	</figure>
+	</div>
 )
 
 export default Icon
