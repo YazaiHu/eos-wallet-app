@@ -32,7 +32,7 @@ class Transactions extends Component {
 		return data.map(item => {
 			const date = new Date(item.date)
 			item.date = {
-				month: date.toLocaleString('en-US', { month: 'long' }),
+				month: date.toLocaleString('en-US', { month: 'long' }).substr(0, 3),
 				day: date.getDay()
 			}
 			return item
