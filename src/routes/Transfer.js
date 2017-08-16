@@ -9,7 +9,7 @@ class Transfer extends Component {
 				<h3>Transfer</h3>
 				<p>Move funds to another EOS account.</p>
 				<TransferForm />
-				<Transactions />	
+				<Transactions />
 			</div>
 		)
 	}
