@@ -7,7 +7,6 @@ import {
 import {
 	About,
 	Faqs,
-	Home,
 	NoMatch,
 	Permissions,
 	Preferences,
@@ -35,7 +34,7 @@ class App extends Component {
 				<Header />
 				<Navbar />
 				<Scene>
-					<Route exact path="/" component={Home} />
+					<Route exact path="/" component={Transfer} />
 					<Route path="/transfer" component={Transfer} />
 					<Route path="/transactions" component={TransactionHistory} />
 					<Route path="/permissions" component={Permissions} />

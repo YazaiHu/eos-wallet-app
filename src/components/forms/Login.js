@@ -7,7 +7,7 @@ class Login extends Component {
 		return (
 			<form>
 				<fieldset>
-					<label>Username/label>
+					<label>Username</label>
 					<input type="text" />
 				</fieldset>
 

@@ -12,7 +12,7 @@ class ResetPassword extends Component {
 				</fieldset>
 
 				<fieldset>
-					<label>New password<label>
+					<label>New password</label>
 					<input type="text" />
 				</fieldset>
 
