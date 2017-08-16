@@ -57,11 +57,9 @@
 
 .-transaction {
     .-transaction-left {
-        float: left;
         width: calc(100% - 160px);
     }
     .-transaction-date {
-        float: left;
         text-align: center;
         .date-month {
             font-size: 80%;
@@ -78,20 +76,30 @@
         width: 40px;
         height: 40px;
         border: 3px solid $orange;
-        @include border-radius(20px);
-        float: left;
+        @include border-radius(20px);;
         margin-left: 20px;
     }
     .-transaction-memo {
-        float: left;
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 40px;
         p {
-            margin: 0 0 0 20px;
+            margin: 0;
         }
     }
     .-transaction-amount-container {
-        float: right;
-        width: 140px;
+        width: 160px;
         text-align: right;
+        .-transaction-icon {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            min-height: 40px;
+            margin-left: 5px;
+            font-size: 80%
+        }
         .-transaction-amount {
             margin-bottom: 0;
             font-size: 120%;
@@ -101,7 +109,6 @@
             min-height: 40px;
         }
         .-transaction-date {
-            display: inline-block;
             text-align: center;
             .date-month {
                 font-size: 80%;

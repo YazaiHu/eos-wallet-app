@@ -4,8 +4,8 @@ import {List, Icon} from '../components'
 import TransactionsQuery from '../query/transactions'
 
 const Transaction = ({ date, sender, memo, amount }) => (
-	<div className="-list-item -transaction clearfix">
-		<div className="-transaction-left">
+	<div className="-list-item -transaction d-flex flex-row">
+		<div className="-transaction-left d-flex flex-row">
 			<div className="-transaction-date">
 				<div className="date-month">{date.month}</div>
 				<div className="date-day">{date.day}</div>
@@ -18,9 +18,9 @@ const Transaction = ({ date, sender, memo, amount }) => (
             </div>
 		</div>
 
-		<div className="-transaction-amount-container">
-			<p className="-transaction-amount">{amount}</p>
-			<Icon className="-transaction-icon" />
+		<div className="-transaction-amount-container d-flex flex-row-reverse">
+			<Icon className="-transaction-icon icon-eos_icons_transfer_to" />
+            <p className="-transaction-amount">{amount}</p>
 		</div>
 	</div>
 )
